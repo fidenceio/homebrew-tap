@@ -11,15 +11,10 @@
 class Manifest < Formula
   desc "A powerful CLI tool for managing manifest files, versioning, and repository operations with trusted timestamp verification"
   homepage "https://github.com/fidenceio/manifest.cli"
-  url "https://github.com/fidenceio/manifest.cli/archive/refs/tags/v61.2.1.tar.gz"
-  sha256 "39d4ee76985b5d0ff92de5acb3a562cd09a9545b6a14e3f3acfaa5616ca96788"
+  url "https://github.com/fidenceio/manifest.cli/archive/refs/tags/v62.0.0.tar.gz"
+  sha256 "05b51df0bf43095a82d94eb2a0cae915dd7bb5890d932538cdca7d82d6fd35a6"
   license "Apache-2.0"
   head "https://github.com/fidenceio/manifest.cli.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/fidenceio/homebrew-tap/releases/download/bottle-v61.2.1"
-    sha256 cellar: :any, all: "4d9096a88f3be588c1dfee07b4f9be209835dafa5bf852ec81fcebf9bf24fff0"
-  end
 
   depends_on "bash"
   depends_on "git" => :recommended
@@ -143,7 +138,7 @@ class Manifest < Formula
       To get started:
         manifest --help          # Show help
         manifest test            # Test functionality
-        manifest time            # Get trusted timestamp
+        manifest config time     # Show HTTPS timestamp configuration
 
       The CLI will automatically detect your OS and apply optimizations.
 
